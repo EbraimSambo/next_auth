@@ -1,9 +1,9 @@
 const LoginPage = () => {
-    return ( 
+    return (  
         <div>
-            LoginPageComponent
+            Login Page Auth/Prefix
         </div>
-     );
+    );
 }
  
 export default LoginPage;

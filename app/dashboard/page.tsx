@@ -1,9 +1,0 @@
-const DashbordPage = () => {
-    return ( 
-        <div>
-            <h1>Dashboard</h1>
-        </div>
-     );
-}
- 
-export default DashbordPage;
