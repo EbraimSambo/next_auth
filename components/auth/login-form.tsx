@@ -24,8 +24,15 @@ const LoginForm = () => {
          showSocial
          >
          <Form {...form} >
-            <form onSubmit={form.handleSubmit(()=>{})}>
+            <form 
+            onSubmit={form.handleSubmit(()=>{})}
+            className='space-y-6'
+            >
+                <div className="space-y-4">
+                    <FormField control={form.control} name={"email"} >
 
+                    </FormField>
+                </div>
             </form>
          </Form>
         </CardWrapper>
