@@ -1,6 +1,21 @@
+"use client";
+import * as Z from 'zod'
+import { LoginSchema } from "@/schemas";
 import { CardWrapper } from "@/components/auth/card-wrapper";
-
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Form, FormControl, FormField, FormLabel, FormItem, FormMessage } from "@/components/ui/form";
 const LoginForm = () => {
+
+    const form = useForm<Z.infer<typeof LoginSchema>>({
+        resolver: zodResolver(LoginSchema),
+        defaultValues: {
+            email: "",
+            password: "",
+        },
+    });
+
+
     return ( 
         <CardWrapper
          headerLabel="Bem-vido de Volta"
@@ -8,7 +23,11 @@ const LoginForm = () => {
          backBottonHref="/auth/register"
          showSocial
          >
-            Login Form g
+         <Form {...form} >
+            <form onSubmit={form.handleSubmit(()=>{})}>
+
+            </form>
+         </Form>
         </CardWrapper>
      );
 }
